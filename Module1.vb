@@ -80,7 +80,7 @@
             Console.WriteLine("You won the game!!")
         ElseIf lossPercent > winPercent AndAlso lossPercent > tiedPercent Then
             Console.WriteLine("You loosed the game!!")
-        ElseIf tiedPercent > winPercent AndAlso tiedPercent > lossPercent Then
+        ElseIf tiedPercent > winPercent AndAlso tiedPercent > lossPercent Or winPercent = tiedPercent Or lossPercent = tiedPercent Then
             Console.WriteLine("You tied the game!!")
         End If
     End Sub
