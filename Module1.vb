@@ -38,7 +38,7 @@
         Console.WriteLine("| {0} | {1} | {2} | {3} |", str1.PadRight(6), str2.PadRight(19), str3.PadRight(17), str4.PadRight(20))
     End Sub
     ''' <summary>
-    ''' Creates out the table.
+    ''' Creates the table.
     ''' </summary>
     Sub PrintReport()
         Console.WriteLine("".PadRight(75, "#"))
@@ -76,6 +76,13 @@
         Console.WriteLine("Your win percentage is: {0}", winPercent.ToString("P2"))
         Console.WriteLine("Your loss percentage is: {0}", lossPercent.ToString("P2"))
         Console.WriteLine("Your tied percentage is: {0}", tiedPercent.ToString("P2"))
+        If winPercent > lossPercent AndAlso winPercent > tiedPercent Then
+            Console.WriteLine("You won the game!!")
+        ElseIf lossPercent > winPercent AndAlso lossPercent > tiedPercent Then
+            Console.WriteLine("You loosed the game!!")
+        ElseIf tiedPercent > winPercent AndAlso tiedPercent > lossPercent Then
+            Console.WriteLine("You tied the game!!")
+        End If
     End Sub
     ''' <summary>
     ''' Gets valid input from the user.
